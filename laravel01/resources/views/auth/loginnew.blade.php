@@ -30,9 +30,10 @@
                             </div>
                             <h4>Welcome back!</h4>
                             <h6 class="font-weight-light">Happy to see you again!</h6>
-                            <form class="pt-3">
+                            <form class="pt-3" method="POST" action="{{route('login')}}">
+                            @csrf
                                 <div class="form-group">
-                                    <label for="exampleInputEmail">Username</label>
+                                    <label for="exampleInputEmail">Email</label>
                                     <div class="input-group">
                                         <div class="input-group-prepend bg-transparent">
                                             <span class="input-group-text bg-transparent border-right-0">
@@ -40,7 +41,7 @@
                                             </span>
                                         </div>
                                         <input type="text" class="form-control form-control-lg border-left-0"
-                                            id="exampleInputEmail" placeholder="Username">
+                                            id="exampleInputEmail" placeholder="Username" name="email">
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -52,7 +53,7 @@
                                             </span>
                                         </div>
                                         <input type="password" class="form-control form-control-lg border-left-0"
-                                            id="exampleInputPassword" placeholder="Password">
+                                            id="exampleInputPassword" placeholder="Password" name="password">
                                     </div>
                                 </div>
                                 <div class="my-2 d-flex justify-content-between align-items-center">
@@ -65,8 +66,7 @@
                                     <a href="#" class="auth-link text-black">Forgot password?</a>
                                 </div>
                                 <div class="my-3">
-                                    <a class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn"
-                                        href="../../index.html">LOGIN</a>
+                                    <button type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" >LOGIN</button>
                                 </div>
                                 <div class="mb-2 d-flex">
                                     <button type="button" class="btn btn-facebook auth-form-btn flex-grow mr-1">
